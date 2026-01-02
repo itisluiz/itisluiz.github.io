@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de VM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Secret Code Modal -->
+    <div class="secret-modal" id="secretModal">
+        <div class="secret-modal-content">
+            <h2>Código de Segurança</h2>
+            <p>Digite seu código de segurança para continuar</p>
+            <div class="secret-input-group">
+                <input 
+                    type="password" 
+                    id="secretInput" 
+                    placeholder="Cole aqui..."
+                    autocomplete="off"
+                >
+                <button id="secretConfirmBtn" class="btn-secret-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content hidden" id="mainContent">
+            <h1>Controle do servidorzão</h1>
+
+            <div class="state-display">
+                <div class="state-badge hidden" id="stateBadge">
+                </div>
+                <div class="state-loading" id="stateLoading">
+                    <span>Carregando status...</span>
+                </div>
+            </div>
+
+            <div class="actions" id="actionsContainer">
+                <button class="btn-status" id="btnStatus">Status</button>
+            </div>
+
+            <div class="loading-state hidden" id="loadingState">
+                <span class="spinner"></span>
+                <span id="loadingText">Processando...</span>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+
+            <div class="mc-server-section">
+                <div class="server-address-container">
+                    <span class="server-address" id="serverAddress">fujiko.itisluiz.com</span>
+                    <button class="btn-copy" id="copyBtn" title="Copiar endereço do servidor">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="secret-code-indicator">
+                <button id="changeSecretBtn">Mudar código</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
