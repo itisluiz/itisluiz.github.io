@@ -171,8 +171,8 @@ function updateState(state) {
     const onStates = ['running', 'starting', 'restarting'];
     const isOn = onStates.includes(state);
     const backgroundImage = isOn 
-        ? "url('/assets/joker-on.jpg')" 
-        : "url('/assets/joker-off.jpg')";
+        ? "url('/joker-on.jpg')" 
+        : "url('/joker-off.jpg')";
     console.log(`State: ${state}, Is On: ${isOn}, Setting background: ${backgroundImage}`);
     document.documentElement.style.setProperty('--bg-image', backgroundImage);
 }
